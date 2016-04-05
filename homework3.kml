@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<Document>
+<Style id="z1">
+<IconStyle><Icon><href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href></Icon></IconStyle>
+</Style>
+<Placemark><name>Apartment</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2825914305805,34.03049477379213</coordinates></Point>
+</Placemark>
+<Placemark><name>Hoover St</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28404499311449,34.02805066807913</coordinates></Point>
+</Placemark>
+<Placemark><name>School Gate</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28364945570421,34.02401396309674</coordinates></Point>
+</Placemark>
+<Placemark><name>Restaurant</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28594682192396,34.02053543958148</coordinates></Point>
+</Placemark>
+<Placemark><name>Gym</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28839880588475,34.02267311707601</coordinates></Point>
+</Placemark>
+<Placemark><name>Law School</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.2847775147668,34.0191711578835</coordinates></Point>
+</Placemark>
+<Placemark><name>Leavey Library</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28269418749089,34.021466132424976</coordinates></Point>
+</Placemark>
+<Placemark><name>Viterbi</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.28773827419049,34.02075585693713</coordinates></Point>
+</Placemark>
+<Placemark><name>Starbucks</name>
+<styleUrl>#z1</styleUrl><Point><coordinates>-118.27729546391716,34.02622712780104</coordinates></Point>
+</Placemark>
+ <Style id="transBluePoly">
+ <LineStyle>
+ <width>1.5</width>
+ </LineStyle>
+ <PolyStyle>
+ <color>7dff0000</color>
+ </PolyStyle>
+ </Style> <Placemark>
+ <name>Building 41</name>
+ <styleUrl>#transBluePoly</styleUrl>
+<Polygon>
+ <extrude>1</extrude>
+ <altitudeMode>relativeToGround</altitudeMode>
+ <outerBoundaryIs>
+ <LinearRing>
+ <coordinates> -118.284777514767,34.0191711578835,17
+ -118.28773827419,34.0207558569371,17
+ -118.288398805885,34.022673117076,17
+ -118.282591430581,34.0304947737921,17
+ -118.277295463917,34.026227127801,17
+ -118.284777514767,34.0191711578835,17
+ </coordinates>
+ </LinearRing>
+ </outerBoundaryIs>
+ </Polygon>
+ </Placemark>
+
+<Placemark>
+ <LineString>
+  <coordinates>
+   -118.2825914305805,34.03049477379213,17
+   -118.28404499311449,34.02805066807913,17
+  </coordinates>
+ </LineString>
+ <Style>
+  <LineStyle>
+   <width>5</width>
+  </LineStyle>
+ </Style>
+</Placemark>
+
+<Placemark>
+ <LineString>
+  <coordinates>
+   -118.2825914305805,34.03049477379213,17
+   -118.28364945570421,34.02401396309674,17
+  </coordinates>
+ </LineString>
+ <Style>
+  <LineStyle>
+   <width>5</width>
+  </LineStyle>
+ </Style>
+</Placemark>
+
+<Placemark>
+ <LineString>
+  <coordinates>
+   -118.2825914305805,34.03049477379213,17
+   -118.27729546391716,34.02622712780104,17
+  </coordinates>
+ </LineString>
+ <Style>
+  <LineStyle>
+   <width>5</width>
+  </LineStyle>
+ </Style>
+</Placemark>
+
+
+</Document></kml>

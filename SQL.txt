@@ -1,0 +1,34 @@
+CREATE DATABASE postgis;
+
+CREATE TABLE points
+(  
+pid integer NOT NULL,  
+pname character varying(20),
+PRIMARY KEY (pid)
+);
+
+CREATE EXTENSION postgis;
+
+SELECT AddGeometryColumn ('points','somepoints',4326,'POINT',2);
+
+INSERT INTO points (pid,pname,somepoints)
+VALUES (1,'Apartment',ST_GeomFromText('POINT(-118.2825914305805 34.03049477379213)',4326))
+(2,'Hoover St',ST_GeomFromText('POINT(-118.28404499311449 34.02805066807913)',4326)),
+(3,'School Gate',ST_GeomFromText('POINT(-118.28364945570421 34.02401396309674)',4326)),
+(4,'Restaurant',ST_GeomFromText('POINT(-118.28594682192396 34.02053543958148)',4326)),
+(5,'Gym',ST_GeomFromText('POINT(-118.28839880588475 34.02267311707601)',4326)),
+(6,'Law School',ST_GeomFromText('POINT(-118.2847775147668 34.0191711578835)',4326)),
+(7,'Leavey Library',ST_GeomFromText('POINT(-118.28269418749089 34.021466132424976)',4326)),
+(8,'Viterbi',ST_GeomFromText('POINT(-118.28773827419049 34.02075585693713)',4326)),
+(9,'Starbucks',ST_GeomFromText('POINT(-118.27729546391716 34.02622712780104)',4326));
+
+SELECT ST_AsText(
+ST_ConvexHull(ST_Collect(d.somepoints)))
+FROM points as d;
+
+SELECT * FROM(
+SELECT p1.pid
+FROM points AS p1,points AS p2
+WHERE p1.pid!=p2.pid AND p2.pid=1
+ORDER BY ST_Distance(p1.somepoints,p2.somepoints)) AS dis
+limit 3;
